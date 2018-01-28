@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "build:worker": "webpack --config worker.webpack.config.js",
+    "build:worker": "webpack --config worker.webpack.config.js -p",
+    "dev:worker": "webpack -w --config worker.webpack.config.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
