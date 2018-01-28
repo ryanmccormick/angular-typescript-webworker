@@ -1,0 +1,14 @@
+<div class="worker-response-container">
+<h3>{{ title }}</h3>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-primary" (click)="sendWorkerRequest()" *ngIf="!workerResponse">Get Worker Response</button>
+    <button class="btn btn-danger" (click)="clearResponse()" *ngIf="workerResponse">Clear Worker Response</button>
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col-12">
+    <h4>Current Response: {{ workerResponse ? workerResponse : 'No Data' }}</h4>
+  </div>
+</div>
+</div>
