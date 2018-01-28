@@ -25,4 +25,16 @@ export class WorkerMessage {
     this.data = data;
   }
 
+  /**
+   * Static method for returning a new WorkerMessage instance
+   * based on an input object.
+   * @param value
+   * @returns {WorkerMessage}
+   */
+  public static getInstance(value: any): WorkerMessage {
+    const { topic, data } = value;
+    return new WorkerMessage(topic, data);
+  }
+
+
 }

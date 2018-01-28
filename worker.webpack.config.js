@@ -1,7 +1,7 @@
 const path = require('path');
 const ProgressPlugin = require('webpack/lib/ProgressPlugin');
-const {NoEmitOnErrorsPlugin} = require('webpack');
-const {AotPlugin} = require('@ngtools/webpack');
+const { NoEmitOnErrorsPlugin } = require('webpack');
+const { AotPlugin } = require('@ngtools/webpack');
 
 module.exports = {
   'devtool': 'source-map',
