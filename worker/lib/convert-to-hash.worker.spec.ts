@@ -23,28 +23,28 @@ describe('ConvertToHashWorker', () => {
       const inputMessage = new WorkerMessage(WORKER_TOPIC.convertToHash, '12345678923');
       const md5Message = ConvertToHashWorker.doWork(inputMessage);
 
-      expect(md5Message.data.toString()).toEqual('cb3df55a5e19365718083f2de84896d8');
+      expect(md5Message.data).toEqual('cb3df55a5e19365718083f2de84896d8');
     });
 
     it('should handle an undefined message data value gracefully', () => {
       const inputMessage = new WorkerMessage(WORKER_TOPIC.convertToHash, undefined);
       const md5Message = ConvertToHashWorker.doWork(inputMessage);
 
-      expect(md5Message.data.toString()).toEqual('');
+      expect(md5Message.data).toEqual('');
     });
 
     it('should handle a null message data value gracefully', () => {
       const inputMessage = new WorkerMessage(WORKER_TOPIC.convertToHash, null);
       const md5Message = ConvertToHashWorker.doWork(inputMessage);
 
-      expect(md5Message.data.toString()).toEqual('');
+      expect(md5Message.data).toEqual('');
     });
 
     it('should handle an empty message data value gracefully', () => {
       const inputMessage = new WorkerMessage(WORKER_TOPIC.convertToHash, '');
       const md5Message = ConvertToHashWorker.doWork(inputMessage);
 
-      expect(md5Message.data.toString()).toEqual('');
+      expect(md5Message.data).toEqual('');
     });
 
   });
