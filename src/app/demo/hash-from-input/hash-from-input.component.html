@@ -1,0 +1,26 @@
+
+<div class="hash-from-input-container">
+<h3>Demo: Create MD5 Hash From Input</h3>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <label for="inputValue">Convert to MD5</label>
+        <input type="text" class="form-control" id="inputValue" name="inputValue" [(ngModel)]="inputVal">
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="md5HashValue">
+    <div class="col-12">
+      <h5>MD5 Hash: {{ md5HashValue }}</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-secondary" (click)="clearAll()">Clear</button>
+    </div>
+  </div>
+
+
+</div>

@@ -11,10 +11,11 @@ export class ConvertToHashWorker {
     let data = '';
 
     if (value.data) {
+      console.log('ConvertToHashWorker#doWork: Calculating New MD5');
       data = genMd5(value.data);
     }
 
-    return new WorkerMessage(value.topic, data);
+    return new WorkerMessage(value.topic, data.toString());
   }
 
 }
