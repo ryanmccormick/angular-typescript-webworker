@@ -1,6 +1,6 @@
 describe('Main Worker Spec', () => {
 
-  it('should fail', () => {
+  it('should pass', () => {
     expect(true).toEqual(true);
   });
 

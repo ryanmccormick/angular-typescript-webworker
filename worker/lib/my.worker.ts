@@ -4,7 +4,6 @@ import { WORKER_TOPIC } from './shared/topic.constants';
 import { ReturnAckWorker } from './return-ack.worker';
 import { ConvertToHashWorker } from './convert-to-hash.worker';
 
-
 export class MyWorker {
 
   workerCtx: any;
