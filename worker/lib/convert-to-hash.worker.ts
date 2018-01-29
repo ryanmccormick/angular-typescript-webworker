@@ -8,7 +8,12 @@ import * as genMd5 from 'crypto-js/md5';
 export class ConvertToHashWorker {
 
   public static doWork(value: WorkerMessage): WorkerMessage {
-    const data = genMd5(value.data);
+    let data = '';
+
+    if (value.data) {
+      data = genMd5(value.data);
+    }
+
     return new WorkerMessage(value.topic, data);
   }
 
